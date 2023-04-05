@@ -5,7 +5,9 @@ class Car(
     val forwardCount: ForwardCount = ForwardCount()
 ) {
 
-    fun moveForward() = forwardCount.addCount()
+    fun moveForward(isMove: Boolean) {
+        if (isMove) forwardCount.addCount()
+    }
 
     companion object {
         fun from(name: String): Car = Car(Name((name)))

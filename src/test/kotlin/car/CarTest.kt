@@ -27,7 +27,7 @@ class CarTest {
     @Test
     fun `자동차를 전진시킨다`() {
         val car: Car = Car.from("Crong")
-        car.moveForward()
+        car.moveForward(true)
         assertThat(car.forwardCount.toInt()).isEqualTo(1)
     }
 }

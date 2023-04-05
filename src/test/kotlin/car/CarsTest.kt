@@ -35,4 +35,21 @@ class CarsTest {
         val carsAfterMoveSum: Int = cars.values.sumOf { it.forwardCount.toInt() }
         assertThat(carsBeforeMoveSum).isNotEqualTo(carsAfterMoveSum)
     }
+
+    @Test
+    fun `우승자를 선출한다`() {
+        val cars: Cars = Cars(
+            listOf<Car>(
+                Car.from("크롱", 5), Car.from("수달", 5),
+                Car.from("부나", 0), Car.from("글모니", 2),
+            )
+        )
+        val expected: Cars = Cars(
+            listOf<Car>(
+                Car.from("크롱", 5), Car.from("수달", 5)
+            )
+        )
+
+        assertThat(cars.getWinners().values).isEqualTo(expected.values)
+    }
 }

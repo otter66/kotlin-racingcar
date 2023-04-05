@@ -1,6 +1,6 @@
 package car
 
-class Car(
+data class Car(
     val name: Name,
     val forwardCount: ForwardCount = ForwardCount()
 ) {
@@ -10,6 +10,6 @@ class Car(
     }
 
     companion object {
-        fun from(name: String): Car = Car(Name((name)))
+        fun from(name: String, forwardCount: Int = 0): Car = Car(Name((name)), ForwardCount(forwardCount))
     }
 }

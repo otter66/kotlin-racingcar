@@ -23,4 +23,11 @@ class CarTest {
             { assertThat(car.forwardCount.toInt()).isEqualTo(0) }
         )
     }
+
+    @Test
+    fun `자동차를 전진시킨다`() {
+        val car: Car = Car.from("Crong")
+        car.moveForward()
+        assertThat(car.forwardCount.toInt()).isEqualTo(1)
+    }
 }

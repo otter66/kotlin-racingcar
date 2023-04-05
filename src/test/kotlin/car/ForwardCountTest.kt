@@ -12,9 +12,9 @@ class ForwardCountTest {
     }
 
     @Test
-    fun `한 칸 전진한다`() {
+    fun `숫자를 증가시킨다`() {
         val forwardCount: ForwardCount = ForwardCount()
-        forwardCount.moveForward()
+        forwardCount.addCount()
         assertThat(forwardCount.toInt()).isEqualTo(1)
     }
 }

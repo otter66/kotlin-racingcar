@@ -6,5 +6,5 @@ data class ForwardCount(
 
     fun toInt() = value
 
-    fun moveForward() = value++
+    fun addCount() = value++
 }

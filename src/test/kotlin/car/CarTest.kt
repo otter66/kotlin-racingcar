@@ -14,4 +14,13 @@ class CarTest {
             { assertThat(car.name.toString()).isEqualTo("Crong") }
         )
     }
+
+    @Test
+    fun `자동차의 전진 횟수를 가진다`() {
+        val car: Car = Car.from("Crong")
+        assertAll(
+            { assertThat(car.forwardCount).isNotNull },
+            { assertThat(car.forwardCount.toInt()).isEqualTo(0) }
+        )
+    }
 }

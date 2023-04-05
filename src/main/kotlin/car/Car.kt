@@ -1,7 +1,8 @@
 package car
 
 class Car(
-    val name: Name
+    val name: Name,
+    val forwardCount: ForwardCount = ForwardCount()
 ) {
 
     companion object {

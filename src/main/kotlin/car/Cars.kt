@@ -8,8 +8,6 @@ data class Cars(
     val values: List<Car>
 ) {
 
-    constructor(carNames: List<String>) : this(carNames.map { Car(Name(it)) })
-
     fun moveRandomForward() {
         values.forEach {
             val randomNumber: Int = RandomGenerator.getRandomNumberInRange(FORWARD_RANDOM_RANGE)
@@ -22,5 +20,9 @@ data class Cars(
         val winForwardCount: Int = GameRule.getWinnerForwardCount(values.map { it.forwardCount.toInt() })
         val winners: List<Car> = values.filter { it.forwardCount.toInt() == winForwardCount }
         return Cars(winners)
+    }
+
+    companion object {
+        fun from(names: List<String>): Cars = Cars(names.map { Car.from(it) })
     }
 }

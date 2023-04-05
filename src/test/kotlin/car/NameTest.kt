@@ -26,4 +26,10 @@ class NameTest {
     fun `1이상 5이하가 아닐 때 에러를 발생시킨다`(value: String) {
         assertThrows<IllegalArgumentException> { Name(value) }
     }
+
+    @Test
+    fun `외부에서 객체를 쓰고자 할 때 가지고 있는 문자열을 반환한다`() {
+        val carName: Name = Name("hello")
+        assertThat(carName.toString()).isEqualTo("hello")
+    }
 }

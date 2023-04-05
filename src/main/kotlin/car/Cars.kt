@@ -8,6 +8,8 @@ data class Cars(
     val values: List<Car>
 ) {
 
+    constructor(carNames: List<String>) : this(carNames.map { Car(Name(it)) })
+
     fun moveRandomForward() {
         values.forEach {
             val randomNumber: Int = RandomGenerator.getRandomNumberInRange(FORWARD_RANDOM_RANGE)

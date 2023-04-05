@@ -2,8 +2,8 @@ package rule
 
 object GameRule {
 
-    private val NOT_FORWARD_CONDITION = 0..3
-    private val FORWARD_CONDITION = 4..9
+    private val NOT_FORWARD_CONDITION: IntRange = 0..3
+    private val FORWARD_CONDITION: IntRange = 4..9
 
     fun isForward(number: Int): Boolean? = when (number) {
         in FORWARD_CONDITION -> true

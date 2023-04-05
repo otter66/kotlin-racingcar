@@ -17,9 +17,10 @@ class OutputView {
 
     fun printWinners(cars: Cars) {
         print("최종 우승자: ")
-        cars.values.forEach {
-            val name: String = it.name.toString()
-            print("$name, ")
+        cars.values.forEachIndexed { index, car ->
+            val name: String = car.name.toString()
+            val delimiter: String = if (index != cars.values.lastIndex) ", " else ""
+            print("$name$delimiter")
         }
     }
 

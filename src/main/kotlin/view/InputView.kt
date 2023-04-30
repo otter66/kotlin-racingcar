@@ -1,6 +1,6 @@
 package view
 
-import car.Cars
+import domain.car.Cars
 
 class InputView {
 

@@ -1,4 +1,4 @@
-package random
+package domain.random
 
 object RandomGenerator {
 

@@ -1,8 +1,8 @@
-package random
+package domain.random
 
+import domain.random.RandomGenerator.FORWARD_RANDOM_RANGE
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import random.RandomGenerator.FORWARD_RANDOM_RANGE
 
 class RandomGeneratorTest {
 

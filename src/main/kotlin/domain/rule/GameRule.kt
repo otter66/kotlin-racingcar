@@ -1,4 +1,4 @@
-package rule
+package domain.rule
 
 object GameRule {
 

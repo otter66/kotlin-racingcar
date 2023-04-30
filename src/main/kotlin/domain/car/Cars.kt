@@ -1,8 +1,8 @@
-package car
+package domain.car
 
-import random.RandomGenerator
-import random.RandomGenerator.FORWARD_RANDOM_RANGE
-import rule.GameRule
+import domain.random.RandomGenerator
+import domain.random.RandomGenerator.FORWARD_RANDOM_RANGE
+import domain.rule.GameRule
 
 data class Cars(
     val values: List<Car>

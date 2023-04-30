@@ -1,7 +1,7 @@
 package view
 
-import car.Cars
-import car.ForwardCount
+import domain.car.Cars
+import domain.car.ForwardCount
 
 class OutputView {
 

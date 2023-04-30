@@ -1,6 +1,6 @@
 package controller
 
-import car.Cars
+import domain.car.Cars
 import view.InputView
 import view.OutputView
 
